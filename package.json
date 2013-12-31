@@ -1,0 +1,10 @@
+{
+  "name" : "node-rails",
+  "description" : "Node on Rails",
+  "author" : "Blaine Kasten<blainekasten@gmail.com>",
+  "version" : "0.0.1",
+  "dependencies" : {
+    "colors" : ">= 0.0.0",
+    "blade" : ">= 3.2.7"
+  }
+}
