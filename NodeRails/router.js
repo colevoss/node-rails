@@ -14,7 +14,7 @@ router = (function(){
   /*
    * This function is used to call the controller and action mapped.
    * For example, given the string 'user#index'. It will get the module
-   * located in app/controllers/user_controller.js and call the action
+   * located in backend/controllers/user_controller.js and call the action
    * `index` with the req and res objects.
    *
    * @type Function
@@ -91,7 +91,7 @@ router = (function(){
      * @type {string}
      */
 
-    controllerDir: '../app/controllers/',
+    controllerDir: '../backend/controllers/',
 
     /*
      * Internal hash of routes

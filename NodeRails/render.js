@@ -2,6 +2,7 @@ var url = require("url");
 var fs = require('fs');
 var router = require('./router');
 var blade = require('blade');
+
 /*
  * @module render
  * @type {Function}
@@ -11,7 +12,7 @@ var blade = require('blade');
  * to file paths. For example. Given Controller `UserController`
  * and action `index()` render will render a .blade file at
  *
- * ./app/views/user/index.blade
+ * ./frontend/views/user/index.blade
  */
 
 var render = (function(){
@@ -23,8 +24,8 @@ var render = (function(){
    * The directory to the views and layouts
    */
 
-  viewDir = './app/views/'
-  layoutDir = './app/views/layouts/'
+  viewDir = './frontend/views/'
+  layoutDir = './frontend/views/layouts/'
 
   /*
    * Function used to get the correlated string to the route
@@ -77,7 +78,7 @@ var render = (function(){
     var controller, controllerSurName, filePath;
 
     controllerSurName = decypherRoute().split(/#/)[0]
-    controller = require('../app/controllers/' + controllerSurName + '_controller.js');
+    controller = require('../backend/controllers/' + controllerSurName + '_controller.js');
 
     // Hit the callback without an argument 
     if (!controller.layout)
