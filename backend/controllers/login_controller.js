@@ -1,7 +1,6 @@
 var render = require('../../NodeRails/render')
 var db = require('../../NodeRails/database')
-var User = require('../models/user')
-var Agency = require('../models/agency')
+var Model = require('../../NodeRails/model')
 
 module.exports = LoginController = {
 
@@ -12,7 +11,7 @@ module.exports = LoginController = {
       //render({users: users}, req, res)
     //})
     data = {}
-    User.find(178, function(user){
+    Model.User.find(178, function(user){
       data['user'] = user
       user.state(function(state){
         data['state'] = state
